@@ -1,0 +1,175 @@
+#!/system/bin/sh
+#=======================================================================#
+#  Copyright (C) 2019 BANG-BLACK All Rights Reserved
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#  code inspired from AnLinux App
+#=======================================================================#
+
+#Bashcolor
+blue='\e[1;34m' 
+green='\e[1;32m' 
+purple='\e[1;35m' 
+cyan='\e[1;36m' 
+red='\e[1;31m' 
+white='\e[1;37m' 
+###########
+clear
+echo ""
+echo ""
+echo -e "[ $cyan LUNA $green DISTRO_ ]"
+echo ""
+echo ""
+echo -e "$cyan [1]. $white Pasang $blue Kali"
+echo ""
+echo -e "$cyan [2]. $white Pasang $blue Blackbox"
+echo ""
+echo -e "$cyan [3]. $white Pasang $blue Alpine"
+echo ""
+echo -e "$cyan [4]. $white Pasang $blue ParrotSecurity"
+echo ""
+echo -e "$cyan [5]. $white Pasang $blue Fedora"
+echo ""
+echo -e "$cyan [6]. $white Pasang $blue CentOS"
+echo ""
+echo -e "$cyan [7]. $white Pasang $blue Debian"
+echo ""
+echo -e "$cyan [8]. $white Pasang $blue Ubuntu"
+echo ""
+echo -e "$cyan [9]. $white Keluar"
+echo ""
+echo -n "Masukan Pilihan (1-9) : "
+read mnu
+case $mnu in
+1)
+clear;
+echo "Memulai proses........Tunggu"
+sleep 4
+clear;
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh
+sleep 2
+clear;
+echo "Proses selesai, Jalankan ./start-kali.sh di untuk memulai"
+sleep 3
+echo "Kembali......"
+sleep 3
+bash /data/data/com.termux/files/home/LUNA
+;;
+2)
+clear;
+echo "Memulai proses........Tunggu"
+sleep 4
+clear;
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/BackBox/backbox.sh && bash backbox.sh
+sleep 2
+clear;
+echo "Proses selesai, Jalankan ./start-blackbox.sh di untuk memulai"
+sleep 3
+echo "Kembali......"
+sleep 3
+bash /data/data/com.termux/files/home/LUNA
+;;
+3)
+clear;
+echo "Memulai proses........Tunggu"
+sleep 4
+clear;
+pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Alpine/alpine.sh && bash alpine.sh
+sleep 2
+clear;
+echo "Proses selesai, Jalankan ./start-alpine.sh di untuk memulai"
+sleep 3
+echo "Kembali....."
+sleep 3
+clear;
+bash /data/data/com.termux/files/home/LUNA
+;; 
+4)
+clear;
+echo "Memulai proses........Tunggu"
+sleep 4
+clear;
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Parrot/parrot.sh && bash parrot.sh
+sleep 2
+clear;
+echo "Proses selesai, Jalankan ./start-parrot.sh di untuk memulai"
+sleep 3
+echo "Kembali......"
+sleep 3
+bash /data/data/com.termux/files/home/LUNA
+;;
+5)
+clear;
+echo "Memulai proses........Tunggu"
+sleep 4
+clear;
+pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Fedora/fedora.sh && bash fedora.sh
+sleep 2
+clear;
+echo "Proses selesai, Jalankan ./start-fedora.sh di untuk memulai"
+sleep 3
+echo "Kembali......"
+sleep 3
+bash /data/data/com.termux/files/home/LUNA
+;;
+6)
+clear;
+echo "Memulai proses........Tunggu"
+sleep 4
+clear;
+pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/CentOS/centos.sh && bash centos.sh
+sleep 2
+clear;
+echo "Proses selesai, Jalankan ./start-centos.sh di untuk memulai"
+sleep 3
+echo "Kembali......"
+sleep 3
+bash /data/data/com.termux/files/home/LUNA
+;;
+7)
+clear;
+echo "Memulai proses........Tunggu"
+sleep 4
+clear;
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
+sleep 2
+clear;
+echo "Proses selesai, Jalankan ./start-debian.sh di untuk memulai"
+sleep 3
+echo "Kembali......"
+sleep 3
+bash /data/data/com.termux/files/home/LUNA
+;;
+8)
+clear;
+echo "Memulai proses........Tunggu"
+sleep 4
+clear;
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh
+sleep 2
+clear;
+echo "Proses selesai, Jalankan ./start-ubuntu.sh di untuk memulai"
+sleep 3
+echo "Kembali......"
+sleep 3
+bash /data/data/com.termux/files/home/LUNA
+;;
+9)
+clear;
+exit 
+;;
+*)
+clear;
+echo "Inputan yang anda masukan salah"
+sleep 2
+clear
+bash /data/data/com.termux/files/home/LUNA
+;;
+esac
+exit 0
